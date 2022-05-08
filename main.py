@@ -1,6 +1,13 @@
 def Register():
-    pass
+    with open("data.txt",'w', encoding='utf-8' ) as f:
+        data=[]
+        data.append(input("Name:"))
+        data.append(input("Surname:"))
+        data.append(input("Pesel:"))
+        f.write(data)
 
+def Login_creation():
+    pass
 def Login(username,password):
     un=input("podaj login: ")
     pw=input("podaj hasło: ")
@@ -11,6 +18,4 @@ def Login(username,password):
         print("fuck off")
         exit()
         return False
-
-while Login("admin","admin"):
-    pass
+Register()
